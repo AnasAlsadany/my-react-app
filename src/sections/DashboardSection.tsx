@@ -17,10 +17,13 @@ export default function DashboardSection() {
       </section>
 
       <section className="mt-2">
-        <  div      className="my-4 d-flex justify-content-center align-items-center">
-
-          <Row className={`p-3 ${theme === "dark" ? "bg-black text-white" : "bg-light text-dark"}`}>
-          <FinancialStatistics />
+        <div className="my-4 d-flex justify-content-center align-items-center">
+          <Row
+            className={`p-3 ${
+              theme === "dark" ? "bg-black text-white" : "bg-light text-dark"
+            }`}
+          >
+            <FinancialStatistics />
             <Col md={3}>
               <FinancialSummary />
             </Col>
@@ -28,7 +31,7 @@ export default function DashboardSection() {
               <SpendOverviewChart />
             </Col>
             <Col md={3}>
-            <EmploymentTypesProgress />
+              <EmploymentTypesProgress />
             </Col>
           </Row>
         </div>

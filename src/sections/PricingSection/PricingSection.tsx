@@ -11,14 +11,14 @@ const PricingSection: React.FC = () => {
   const pricingData = getPricingData(isDark);
 
   return (
-    <div className={`${isDark ? 'bg-dark text-white' : 'bg-light text-dark'} py-5`}>
+    <div >
       <Container className="py-5">
         <div className="text-center mb-3">
           <Badge bg="success" className="rounded-pill px-3 py-1 mb-2">
             Pricing
           </Badge>
           <h2 className="display-5 fw-bold mb-4">Find the right plan</h2>
-          <p className="mx-auto text-center mb-5" style={{ maxWidth: '700px' }}>
+          <p className="mx-auto text-center mb-5" style={{ maxWidth: '500px' }}>
             Invest in your company's future with our comprehensive financial solution. Contact us for pricing details and see how we can help you streamline your finances and reach your business goals.
           </p>
         </div>
@@ -30,7 +30,6 @@ const PricingSection: React.FC = () => {
                 className="w-100"
                 style={{ 
                   width: '100%',
-                  height: '791px',
                   borderRadius: '24px',
                   backgroundColor: isDark ? '#111111' : '#f8f9fa',
                   position: 'relative',
@@ -68,7 +67,7 @@ const PricingSection: React.FC = () => {
                     >
                       {plan.name}
                     </h3>
-                    <p className="text-muted mb-4" style={{ fontSize: '14px' }}>
+                    <p className=" mb-4" style={{ fontSize: '14px' }}>
                       {plan.description}
                     </p>
                     <h2 
@@ -90,7 +89,7 @@ const PricingSection: React.FC = () => {
                         <FaCheck 
                           size={16} 
                           className="me-2 mt-1" 
-                          style={{ color: '#BBFF00' }} 
+                          // style={{ color: '#BBFF00' }} 
                         />
                         <span style={{ fontSize: '14px' }}>{feature}</span>
                       </div>

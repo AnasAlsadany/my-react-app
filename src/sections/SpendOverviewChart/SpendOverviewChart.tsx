@@ -34,8 +34,7 @@ const chartData = {
   ],
 };
 
-const SpendOverviewChart = () => {
- 
+export default function SpendOverviewChart() {
   return (
     <Card className={styles.card}>
       <Card.Body>
@@ -52,6 +51,4 @@ const SpendOverviewChart = () => {
       </Card.Body>
     </Card>
   );
-};
-
-export default SpendOverviewChart;
+}

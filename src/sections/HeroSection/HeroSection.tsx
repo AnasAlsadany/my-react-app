@@ -1,5 +1,6 @@
 import { useTheme } from "next-themes";
 import {Container,Row,Col,Badge,Form,Button,InputGroup,} from "react-bootstrap";
+import Review from "../Review/Review";
 
 export default function HeroSection() {
   const { theme } = useTheme();
@@ -41,14 +42,10 @@ export default function HeroSection() {
             </InputGroup>
           </Col>
         </Row>
-        <div className="d-flex justify-content-center align-items-center gap-2">
-          {
-          /* <div className="d-flex" style={{ marginRight: '10px' }}>
-            {[1, 2, 3, 4].map((id) => (
-            ))}
-          </div> */
-          }
-          <div className="text-muted small">1,200+ reviews (4.9 of 5)</div>
+        <div className="d-flex justify-content-center align-items-center gap-2">    
+        <div className="d-flex" style={{ marginRight: '10px' }}>
+           <Review/>
+          </div> 
         </div>
       </Container>
     </div>

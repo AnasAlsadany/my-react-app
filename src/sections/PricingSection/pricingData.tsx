@@ -1,6 +1,4 @@
-// pricingData.tsx
 
-// Define types for the pricing plan
 interface PricingPlan {
     name: string;
     price: string;

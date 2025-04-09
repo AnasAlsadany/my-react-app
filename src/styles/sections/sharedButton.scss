@@ -1,0 +1,26 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.btn--light {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.btn--light:hover {
+  background-color: #e0e0e0;
+}
+
+.btn--dark {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+.btn--dark:hover {
+  background-color: #444;
+}
