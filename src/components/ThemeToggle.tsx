@@ -1,6 +1,5 @@
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-import SharedButton from '../@shared/sharedButton'
 import { Button } from 'react-bootstrap'
 
 export default function ThemeToggle() {

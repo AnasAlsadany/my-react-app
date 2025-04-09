@@ -9,7 +9,6 @@ import {
   Tooltip,
   Filler,
 } from "chart.js";
-import styles from "./SpendOverviewChart.module.scss";
 
 ChartJS.register(
   LineElement,
@@ -36,7 +35,7 @@ const chartData = {
 
 export default function SpendOverviewChart() {
   return (
-    <Card className={styles.card}>
+    <Card className="mb-4 shadow-sm">
       <Card.Body>
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h5 className="mb-0">Spend Overview</h5>
