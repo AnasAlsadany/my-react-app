@@ -3,6 +3,7 @@ import DashboardSection from "../sections/DashboardSection";
 import FinanceBanner from "../sections/FinanceBanner/FinanceBanner";
 import PricingSection from "../sections/PricingSection/PricingSection";
 import TestimonialsSection from "../sections/TestimonialsSection/TestimonialsSection";
+import Menu from "../sections/Menu/Menu";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -10,11 +11,11 @@ export default function Home() {
   return (
     <>
       <DashboardSection />
-      <div className="d-flex">
-
+      <Menu/>
+      <div className="my-4 d-flex justify-content-center align-items-center">
       <TestimonialsSection />
       </div>
-      <div className={`${isDark ? 'bg-dark text-white' : 'bg-light text-dark'} py-5`}>
+      <div className={`${isDark ? 'bg-dark text-white' : 'bg-light text-dark'}`}>
       <PricingSection/>
       <FinanceBanner/>
       </div>

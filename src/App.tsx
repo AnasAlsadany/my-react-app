@@ -8,7 +8,7 @@ function App() {
   return (
     <ThemeProvider>
       <Layout>
-        <Container fluid="md" className="my-4">
+        <Container fluid="md" className="my-4 p-0">
           <Home />
         </Container>
       </Layout>

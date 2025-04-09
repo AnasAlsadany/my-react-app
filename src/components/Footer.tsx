@@ -2,7 +2,7 @@ import { useTheme } from "next-themes";
 import {Container,Row,Col,Form,Button,} from "react-bootstrap";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
-export default  function Footer (){
+export default  function Menu (){
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
