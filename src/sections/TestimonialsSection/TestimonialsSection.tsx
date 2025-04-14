@@ -1,11 +1,10 @@
-// TestimonialsSection.tsx
-import { useRef } from "react";
 import { Container } from "react-bootstrap";
 import { useTheme } from "next-themes";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import type { SwiperRef } from "swiper/react";
 import "./TestimonialsSection.scss";
+import "swiper/css";
+import "swiper/css/navigation";
 
 interface TestimonialProps {
   name?: string;
@@ -14,43 +13,43 @@ interface TestimonialProps {
   image: string;
 }
 
- export default function TestimonialsSection() {
+export default function TestimonialsSection() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
-  const swiperRef = useRef<SwiperRef>(null);
 
+  // const testimonials: TestimonialProps[] = [
+  //   // ...
+  // ];
   const testimonials: TestimonialProps[] = [
     {
       name: "Alfredo Lubin",
-      content: 'I really like the system at this management, i love recommending this software to you guys',
+      content:
+        "I really like the system at this management, i love recommending this software to you guys",
       rating: 5,
-      image: '/images/1.png'
+      image: "/images/1.png",
     },
     {
       name: "Jane Doe",
-      content: 'We align our success with the success of our customers which is why our offering transcends our software',
+      content:
+        "We align our success with the success of our customers which is why our offering transcends our software",
       rating: 4,
-      image: '/images/1.png'
+      image: "/images/1.png",
     },
     {
       name: "Ahmed Mostafa",
-      content: 'I really like the system at this management, i love recommending this software to you guys',
+      content:
+        "I really like the system at this management, i love recommending this software to you guys",
       rating: 5,
-      image: '/images/1.png'
-    }
+      image: "/images/1.png",
+    },
+    {
+      name: "Ahmed Mostafa",
+      content:
+        "I really like the system at this management, i love recommending this software to you guys",
+      rating: 5,
+      image: "/images/1.png",
+    },
   ];
-  
-  const handlePrev = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
-
-  const handleNext = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
 
   return (
     <div
@@ -61,34 +60,25 @@ interface TestimonialProps {
           <span className="badge-testimonials">Testimonials</span>
           <h2 className="section-title">What are people saying</h2>
           <p className="description">
-            "Thank you for your trust in Crypt Land! We are grateful for your
-            feedback and are committed to providing the best. Read what our
-            clients have to say about their experience with us.
+            "Thank you for your trust in Crypt Land!...
           </p>
         </div>
 
         <div className="testimonials-swiper-container">
           <Swiper
-            ref={swiperRef}
             modules={[Navigation]}
+            navigation={{
+              nextEl: ".next",
+              prevEl: ".prev",
+            }}
             spaceBetween={15}
             slidesPerView={3}
-            initialSlide={0}
-            loop={true} 
+            loop={true}
             centeredSlides={false}
             breakpoints={{
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 10
-              },
-              768: {
-                slidesPerView: 2,
-                spaceBetween: 15
-              },
-              992: {
-                slidesPerView: 3,
-                spaceBetween: 15
-              }
+              0: { slidesPerView: 1, spaceBetween: 10 },
+              768: { slidesPerView: 2, spaceBetween: 15 },
+              992: { slidesPerView: 3, spaceBetween: 15 },
             }}
             className="testimonials-swiper"
           >
@@ -118,14 +108,12 @@ interface TestimonialProps {
               </SwiperSlide>
             ))}
           </Swiper>
-          
-          <div className="navigation-buttons">
-            <button className="nav-btn prev" onClick={handlePrev}>❮</button>
-            <button className="nav-btn next" onClick={handleNext}>❯</button>
-          </div>
+        </div>
+        <div className="navigation-buttons">
+          <button className="nav-btn prev">❮</button>
+          <button className="nav-btn next">❯</button>
         </div>
       </Container>
     </div>
   );
-};
-
+}

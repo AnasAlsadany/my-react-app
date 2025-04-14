@@ -1,5 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTheme } from "next-themes";
+import SharedButton from "../../@shared/sharedButton";
 
 export default function FinanceBanner() {
   const { theme } = useTheme();
@@ -16,15 +17,15 @@ export default function FinanceBanner() {
               </h1>
 
               <div className="d-flex gap-2 mt-4">
-                <Button variant="success" className="rounded-pill px-4 py-2">
-                  Request Demo
-                </Button>
-                <Button
-                  variant={isDark ? "dark" : "secondary"}
+                <SharedButton
+                  variant="success"
                   className="rounded-pill px-4 py-2"
                 >
+                  Request Demo
+                </SharedButton>
+                <SharedButton variant="auto" className="rounded-pill px-4 py-2">
                   Watch Video
-                </Button>
+                </SharedButton>
               </div>
             </Col>
 

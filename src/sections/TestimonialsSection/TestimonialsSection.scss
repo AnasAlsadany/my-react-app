@@ -14,6 +14,11 @@
     .nav-btn {
       background-color: #333;
       color: #fff;
+
+      &.active {
+        background-color: #28a745;
+        color: white;
+      }
     }
   }
 
@@ -29,6 +34,11 @@
     .nav-btn {
       background-color: #f0f0f0;
       color: #333;
+
+      &.active {
+        background-color: #28a745;
+        color: white;
+      }
     }
   }
 
@@ -59,6 +69,12 @@
     height: 100%;
     position: relative;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 
     .content {
       margin-bottom: 1.5rem;
@@ -89,7 +105,7 @@
 
     .quote-mark {
       position: absolute;
-      top: 1rem;
+      top: 6rem;
       right: 1.5rem;
       font-size: 4rem;
       opacity: 0.2;
@@ -98,10 +114,36 @@
     }
   }
 
+  .testimonials-swiper-container {
+    position: relative;
+    margin-bottom: 2rem;
+
+    .testimonials-swiper {
+      width: 100%;
+      overflow: visible;
+      padding: 10px 0;
+    }
+
+    .testimonial-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+      flex-shrink: 0;
+    }
+  }
+
   .navigation-buttons {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     gap: 0.5rem;
 
     .nav-btn {
@@ -113,6 +155,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: 0.3s;
 
       &:hover {
         background-color: #28a745;
@@ -122,39 +165,10 @@
   }
 }
 
-.testimonials-swiper-container {
-  position: relative;
-  padding: 0 5px;
-  margin-bottom: 2rem;
-
-  .testimonials-swiper {
+.testimonials-section {
+  .testimonials-swiper-container {
+    position: relative;
     width: 100%;
-    overflow: visible;
-    padding: 10px 0;
+    overflow: hidden;
   }
-
-  .testimonial-slide {
-    height: auto;
-    display: flex;
-    justify-content: center;
-  }
-}
-.testimonial-card {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
-.swiper-wrapper {
-  display: flex;
-  align-items: stretch;
-}
-
-.swiper-slide {
-  height: auto;
-  flex-shrink: 0;
 }

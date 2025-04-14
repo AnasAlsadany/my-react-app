@@ -12,23 +12,20 @@ export default function FinancialStatistics() {
   ];
 
   return (
-    <div className={`p-3 ${theme === "dark" ? "bg-black text-white" : "bg-light text-dark"}`}>
-      <Row >
-        {cardDetails.length ? (
-          cardDetails.map((item, index) => (
-            <Col key={index} md={4}>
-              <SmCard
-                title={item.title}
-                price={item.price}
-                pons={item.pons}
-                iconColor={item.iconColor as "green" | "red" | "blue"}
-              />
-            </Col>
-          ))
-        ) : (
-          <h1>No data found</h1>
-        )}
-      </Row>
+    <div className={`p-0 ${theme === "dark" ? "bg-black text-white" : "bg-light text-dark"}`}>
+<Row className="g-3">
+  {cardDetails.map((item, index) => (
+    <Col key={index} md={4}>
+      <SmCard
+        title={item.title}
+        price={item.price}
+        pons={item.pons}
+        iconColor={item.iconColor as "green" | "red" | "blue"}
+      />
+    </Col>
+  ))}
+</Row>
+
     </div>
   );
 };

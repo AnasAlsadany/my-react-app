@@ -19,7 +19,7 @@ export default function EmploymentTypesProgress() {
   return (
     <div className="px-3 py-4">
       {employmentData.map((item, idx) => (
-        <div key={idx} className="mb-4">
+        <div key={idx} className="mb-5">
           <div className={`mb-3 ${textColor}`}>{item.label}</div>
           <ProgressBar
             now={item.value}

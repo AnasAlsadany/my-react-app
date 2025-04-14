@@ -1,16 +1,15 @@
 import React from "react";
 import classNames from "classnames";
-import "../styles/sections/sharedButton.scss";
-import { useTheme } from "next-themes"; 
+import { useTheme } from "next-themes";
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "outline-secondary";
+export interface SharedButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "success" | "danger" | "outline" | "outline-secondary" | "light" | "dark" | "auto";
   size?: "sm" | "md" | "lg";
   children: React.ReactNode;
 }
 
-const SharedButton: React.FC<ButtonProps> = ({
-  variant = "primary",
+const SharedButton: React.FC<SharedButtonProps> = ({
+  variant = "auto", 
   size = "md",
   children,
   className,
@@ -19,15 +18,16 @@ const SharedButton: React.FC<ButtonProps> = ({
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
+  const resolvedVariant = variant === "auto" ? (isDark ? "light" : "dark") : variant;
+
   return (
     <button
       className={classNames(
         "btn",
-        `btn--${variant}`,
-        `btn--${size}`,
+        `btn-${resolvedVariant}`,
         {
-          "btn--dark": isDark, 
-          "btn--light": !isDark,
+          "btn-sm": size === "sm",
+          "btn-lg": size === "lg",
         },
         className
       )}

@@ -21,7 +21,7 @@ const SmCard: React.FC<SmCardProps> = ({ title, pons, price, iconColor }) => {
 
   return (
     <div
-      className={`rounded p-3 shadow-sm mb-3 ${
+      className={`rounded p-5 shadow-sm mb-3 ${
         isDark ? "bg-dark text-white" : "bg-white text-dark"
       }`}
     >

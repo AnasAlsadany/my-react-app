@@ -1,8 +1,9 @@
+import SharedButton from "../@shared/sharedButton";
 import { useTheme } from "next-themes";
-import {Container,Row,Col,Form,Button,} from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
 
-export default  function Menu (){
+export default function Menu() {
   const { theme } = useTheme();
   const isDark = theme === "dark";
 
@@ -64,7 +65,7 @@ export default  function Menu (){
                   borderRadius: "0",
                 }}
               />
-              <Button
+              {/* <Button
                 style={{
                   backgroundColor: "#A4FF00",
                   color: "#000",
@@ -75,7 +76,19 @@ export default  function Menu (){
                 className="fw-semibold"
               >
                 Join
-              </Button>
+              </Button> */}
+              <SharedButton
+                style={{
+                  backgroundColor: "#A4FF00",
+                  color: "#000",
+                  border: "none",
+                  padding: "0.75rem 1.5rem",
+                  borderRadius: "0 0.375rem 0.375rem 0",
+                }}
+                className="fw-semibold"
+              >
+                Join
+              </SharedButton>
             </div>
           </Col>
         </Row>
@@ -87,6 +100,4 @@ export default  function Menu (){
       </Container>
     </div>
   );
-};
-
-
+}

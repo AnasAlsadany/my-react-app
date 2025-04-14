@@ -1,4 +1,3 @@
-import { Card } from "react-bootstrap";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -9,6 +8,7 @@ import {
   Tooltip,
   Filler,
 } from "chart.js";
+import SharedCard from "../../@shared/SharedCard"; 
 
 ChartJS.register(
   LineElement,
@@ -35,19 +35,14 @@ const chartData = {
 
 export default function SpendOverviewChart() {
   return (
-    <Card className="mb-4 shadow-sm">
-      <Card.Body>
-        <div className="d-flex justify-content-between align-items-center mb-3">
-          <h5 className="mb-0">Spend Overview</h5>
-          <div>
-            <span className="me-3 fw-bold">Daily</span>
-            <span className="me-3">Weekly</span>
-            <span className="me-3">Monthly</span>
-            <span>Yearly</span>
-          </div>
-        </div>
-        <Line data={chartData} />
-      </Card.Body>
-    </Card>
+    <SharedCard title="Spend Overview">
+      <div className="d-flex justify-content-end align-items-end mb-3">
+        <span className="me-3 fw-bold">Daily</span>
+        <span className="me-3">Weekly</span>
+        <span className="me-3">Monthly</span>
+        <span>Yearly</span>
+      </div>
+      <Line data={chartData} />
+    </SharedCard>
   );
 }
