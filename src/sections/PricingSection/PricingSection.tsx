@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Badge, Button } from "react-bootstrap";
 import { useTheme } from "next-themes";
 import { FaCheck } from "react-icons/fa";
 import { getPricingData } from "./pricingData";
-import SharedButton from "../../@shared/sharedButton";
+import SharedButton from "../../@shared/SharedButton";
 
 const PricingSection: React.FC = () => {
   const { theme } = useTheme();

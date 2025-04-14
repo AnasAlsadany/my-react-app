@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { useTheme } from "next-themes";
 import SharedCard from "../../@shared/SharedCard";
-import SharedButton from "../../@shared/sharedButton";
+import SharedButton from "../../@shared/SharedButton";
 
 const ExpenseManagementCard: React.FC = () => {
   const { theme } = useTheme();

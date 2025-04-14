@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import Review from "../Review/Review";
 import './HeroSection.scss';
-import SharedButton from "../../@shared/sharedButton";
+import SharedButton from "../../@shared/SharedButton";
 
 export default function HeroSection() {
   const { theme } = useTheme();

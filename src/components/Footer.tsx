@@ -1,4 +1,4 @@
-import SharedButton from "../@shared/sharedButton";
+import SharedButton from "../@shared/SharedButton";
 import { useTheme } from "next-themes";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";

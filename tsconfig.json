@@ -16,11 +16,13 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
-    "skipLibCheck": true
-  },
-  "include": ["src"],
-  "paths": {
+    "skipLibCheck": true,
+    "paths": {
       "@shared/*": ["shared/*"],
       "@components/*": ["components/*"]
-    }
+    },
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
 }
+

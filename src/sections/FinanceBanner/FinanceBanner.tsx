@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { useTheme } from "next-themes";
-import SharedButton from "../../@shared/sharedButton";
+import SharedButton from "../../@shared/SharedButton";
 
 export default function FinanceBanner() {
   const { theme } = useTheme();

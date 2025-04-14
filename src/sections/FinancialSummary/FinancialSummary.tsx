@@ -1,6 +1,6 @@
 import { Badge, Container, Row, Col } from "react-bootstrap";
 import { useTheme } from "next-themes";
-import SharedButton from "../../@shared/sharedButton";
+import SharedButton from "../../@shared/SharedButton";
 import SharedCard from "../../@shared/SharedCard"; // Importing SharedCard
 
 export default function FinancialSummary() {
