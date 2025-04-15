@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": "./src",
     "skipLibCheck": true,
+    "noEmit": true, 
     "paths": {
       "@shared/*": ["shared/*"],
       "@components/*": ["components/*"]

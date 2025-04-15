@@ -7,7 +7,7 @@ type SharedCardProps = {
   description?: string;
   imageSrc?: string;
   children?: React.ReactNode;
-  style?: React.CSSProperties; // Add style prop here
+  style?: React.CSSProperties; 
 };
 
 const SharedCard: React.FC<SharedCardProps> = ({
@@ -15,7 +15,7 @@ const SharedCard: React.FC<SharedCardProps> = ({
   description,
   imageSrc,
   children,
-  style, // Destructure style from props
+  style, 
 }) => {
   const { theme } = useTheme();
   const isDark = theme === "dark";
@@ -25,7 +25,7 @@ const SharedCard: React.FC<SharedCardProps> = ({
       className={`p-3 shadow-sm rounded-4 ${
         isDark ? "bg-dark text-white" : "bg-white text-dark"
       }`}
-      style={{ minHeight: "300px", ...style }} // Merge passed style with default styles
+      style={{ minHeight: "300px", ...style }} 
     >
       <Card.Body className="d-flex flex-column justify-content-between h-100">
         {title && (
